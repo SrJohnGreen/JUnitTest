@@ -20,6 +20,11 @@ import junit.framework.TestSuite;
 public class FileReaderTester extends TestCase {
 	FileReader _input;
 	
+	/**
+	 * 构造函数
+	 * 允许通过函数名的方式将测试函数添加到suite
+	 * @param name
+	 */
 	public FileReaderTester(String name){
 		super(name);
 	}
@@ -38,6 +43,12 @@ public class FileReaderTester extends TestCase {
 		_input.close();
 	}
 
+	/**
+	 * 测试函数
+	 * 要求被@Test修饰
+	 * 要求返回值为void
+	 * 
+	 */
 	
 	@Test
 	public void testRead1() throws IOException {
@@ -87,6 +98,7 @@ public class FileReaderTester extends TestCase {
 	
 	public static void fun1(){
 		for(int i = 1;i<=4;i++){
+			//通过函数名的方式将测试函数添加到suite
 			suite.addTest(new FileReaderTester("testRead" + i));
 		}
 	}
