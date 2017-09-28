@@ -1,5 +1,9 @@
 package bookTest;
 
+/**
+ * @author joker
+ * 用作被测试的类
+ */
 public class Book {
 	private String name;
 	
